@@ -6,6 +6,8 @@ import ArrivalsProduct4 from '../../src/assets/image/images1.png'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { addDtatCart } from '../slice/addToCart'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Product = () => {
   const dispatch = useDispatch()
@@ -45,11 +47,15 @@ const Product = () => {
 
   let handleId = (item)=>{
     dispatch(addDtatCart(item))
+    toast("Add successfully");
   }
 
   return (
     <>
         <div className="max-w-container mx-auto">
+        <ToastContainer
+        position="bottom-right"
+        autoClose={1000} />
             <div className="flex gap-5">
                 {
                     Product.map((item, index)=>(
