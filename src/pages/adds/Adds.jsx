@@ -28,8 +28,8 @@ const Adds = () => {
   ]
   return (
      <div className="max-w-container mx-auto">
-        <div className="h-[450px] w-[400px] bg-white absolute left-20 top-20 py-[30px] px-[20px]">
-          <Accordian sections={AccordionSections} activeSectionIndex={4} />
+        <div className="h-[450px] w-[400px] bg-white py-[30px] px-[20px]">
+          <Accordian sections={AccordionSections} activeSectionIndex={0} />
         </div>
      </div>
   )
